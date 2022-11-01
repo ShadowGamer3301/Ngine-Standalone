@@ -2,7 +2,6 @@
 #include <exception>
 #include <sstream>
 #include <iostream>
-
 #include "Macro.hxx"
 
 namespace Ngine {

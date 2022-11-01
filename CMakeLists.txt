@@ -6,6 +6,17 @@
 
 project(libNgine VERSION 1.0)
 if(WIN32)
+	set(CMAKE_CXX_STANDARD 20)
+	set(CMAKE_CXX_STANDARD_REQUIRED TRUE)
 	add_compile_definitions(_DLL)
-	add_library(libNgine SHARED "libNgine-Win32/Exception.cxx")
+	add_library(libNgine SHARED "libNgine-Win32/Exception.cxx" "libNgine-Win32/Window.cxx")
+	find_path(D3DX12_INCLUDE_DIRS "d3dx12.h")
+    target_include_directories(libNgine PRIVATE ${D3DX12_INCLUDE_DIRS})
+endif()
+
+project(testApp VERSION 1.0)
+if(WIN32)
+	add_executable(testApp  "testApp-Win32/main.cpp")
+	target_include_directories(testApp PUBLIC "libNgine-Win32")
+	target_link_libraries(testApp "libNgine.lib")
 endif()
