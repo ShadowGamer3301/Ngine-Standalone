@@ -4,6 +4,7 @@
 int main(void) try {
 
     Ngine::Window wnd(1280, 720, (char*)"Linux Ngine Test App");
+    Ngine::Graphics gfx(wnd);
 
     while(true) {
         if(const auto ecode = wnd.ProcessMessage())
