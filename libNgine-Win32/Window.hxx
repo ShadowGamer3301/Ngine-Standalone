@@ -7,23 +7,25 @@
 
 namespace Ngine {
 	class NAPI Window {
+	friend class Graphics;
+
 	private:
 		class NAPI WindowClass {
 		public:
-			static const char* GetName() noexcept;
+			static const wchar_t* GetName() noexcept;
 			static HINSTANCE GetInstance() noexcept;
 		private:
 			WindowClass() noexcept;
 			~WindowClass();
 			WindowClass(const WindowClass&) = delete;
 			WindowClass& operator=(const WindowClass&) = delete;
-			static constexpr const char* wndClassName = "Ngine Window";
+			static constexpr const wchar_t* wndClassName = L"Ngine Window";
 			static WindowClass wndClass;
 			HINSTANCE hInst;
 		};
 	
 	public:
-		Window(unsigned int width, unsigned int height, char* name);
+		Window(unsigned int width, unsigned int height, wchar_t* name);
 		~Window();
 		Window(const Window&) = delete;
 		Window& operator=(const Window&) = delete;

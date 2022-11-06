@@ -5,7 +5,7 @@ Ngine::Window::WindowClass Ngine::Window::WindowClass::wndClass;
 
 #pragma region WindowClass
 
-const char* Ngine::Window::WindowClass::GetName() noexcept
+const wchar_t* Ngine::Window::WindowClass::GetName() noexcept
 {
 	return wndClassName;
 }
@@ -39,7 +39,7 @@ Ngine::Window::WindowClass::~WindowClass()
 #pragma endregion
 
 #pragma region Window
-Ngine::Window::Window(unsigned int width, unsigned int height, char* name) : width(width), height(height)
+Ngine::Window::Window(unsigned int width, unsigned int height, wchar_t* name) : width(width), height(height)
 {
 	RECT wr;
 	wr.left = 100;
