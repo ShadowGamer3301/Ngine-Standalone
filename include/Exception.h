@@ -7,7 +7,7 @@
 
 namespace Ngine
 {
-	class Exception : public std::exception
+	class NAPI Exception : public std::exception
 	{
 	public:
 		Exception(unsigned int line, std::string file);
