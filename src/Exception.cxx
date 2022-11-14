@@ -31,4 +31,6 @@ const char* Ngine::Exception::GetFile() const noexcept
 {
 	return file.c_str();
 }
+#elif defined __linux__
+
 #endif
