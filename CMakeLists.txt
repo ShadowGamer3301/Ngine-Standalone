@@ -7,7 +7,7 @@ project(LibNgine VERSION 1.0)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED TRUE)
 
-add_library(LibNgine SHARED "src/Exception.cxx" "src/Window.cxx")
+add_library(LibNgine SHARED "src/Exception.cxx" "src/Window.cxx"  "src/Timer.cxx")
 
 if(WIN32)
 	#Add required compile definitions for all platforms
