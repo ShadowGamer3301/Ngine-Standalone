@@ -1,3 +1,4 @@
+#pragma once
 #include "Macro.h"
 #include "Exception.h"
 
@@ -25,7 +26,10 @@ namespace Ngine
 		Window(uint32_t width, uint32_t height, const char* title, bool fullscreen);
 		~Window();
 
-		inline bool KillWindow() const noexcept { return glfwWindowShouldClose(hWnd); }
+		void StartFrame();
+		void EndFrame();
+
+		inline bool KillWindow() { return glfwWindowShouldClose(hWnd); }
 
 	private:
 		GLFWwindow* hWnd;

@@ -1,3 +1,4 @@
+#pragma once
 #include "Macro.h"
 
 #ifdef _WIN32
