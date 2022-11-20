@@ -1,4 +1,5 @@
 #include "Window.h"
+#include <spdlog/spdlog.h>
 
 #ifdef _WIN32
 
@@ -31,6 +32,8 @@ int Ngine::Window::GLFWException::GetCode() const noexcept
 
 Ngine::Window::Window(uint32_t width, uint32_t height, const char* title, bool fullscreen)
 {
+	spdlog::info("Using GLFW3: Copyright (c) 2002-2006 Marcus Geelnard, Copyright (c) 2006-2019 Camilla Löwy");
+
 	if (glfwInit() == GL_FALSE)
 		throw GLFWException(__LINE__, __FILE__, glfwGetError(nullptr));
 	/*
@@ -46,8 +49,6 @@ Ngine::Window::Window(uint32_t width, uint32_t height, const char* title, bool f
 		hWnd = glfwCreateWindow(width, height, title, nullptr, nullptr);
 	else	
 		hWnd = glfwCreateWindow(width, height, title, glfwGetPrimaryMonitor(), nullptr);
-
-
 }
 
 Ngine::Window::~Window()
@@ -85,6 +86,8 @@ int Ngine::Window::GLFWException::GetCode() const noexcept
 
 Ngine::Window::Window(uint32_t width, uint32_t height, const char* title, bool fullscreen)
 {
+	spdlog::info("Using GLFW3: Copyright (c) 2002-2006 Marcus Geelnard, Copyright (c) 2006-2019 Camilla Löwy");
+
 	if (glfwInit() == GL_FALSE)
 		throw GLFWException(__LINE__, __FILE__, glfwGetError(nullptr));
 	/*
