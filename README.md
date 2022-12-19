@@ -4,9 +4,7 @@
 My personal game engine that supports both Windows and GNU/Linux
 
 ## About project
-Ngine is game engine that I'm building for my game. Engine supports both 64-bit windows and 64-bit linux (although windows is my priority for now so 
-updates for linux might be delayed). On windows Ngine uses DirectX 12 API and VulkanAPI for Linux.
-
+Ngine is game engine that I'm building for my game. Engine supports 64-bit linux On for now engine uses OpenGL graphics library.
 ## Building on Windows
 Currently we are dropping Windows support
 Windows build will became separate repository
