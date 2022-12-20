@@ -1,6 +1,5 @@
 #include "Exception.h"
 
-#ifdef _WIN32
 Ngine::Exception::Exception(unsigned int line, std::string file) : line(line), file(file)
 {
 }
@@ -31,6 +30,3 @@ const char* Ngine::Exception::GetFile() const noexcept
 {
 	return file.c_str();
 }
-#elif defined __linux__
-
-#endif

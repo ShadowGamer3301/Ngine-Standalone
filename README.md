@@ -6,13 +6,8 @@ Ngine is game engine that I'm building for my game. Engine supports both 64-bit 
 updates for linux might be delayed). On windows Ngine uses DirectX 12 API and VulkanAPI for Linux.
 
 ## Building on Windows
-To build project on Windows make sure that:
-- Your GPU supports OpenGL 4.1 or higher
-- You have Windows SDK installed
-- You have Windows 10 or newer
-- You have CMake 3.12 or newer
-
-After that download the project, unpack it, then go folder containing CMakeLists.txt generate project files for your IDE / Generator and then you can start compiling since all the required dependencies are included in vendors folder
+Currently we are dropping Windows support
+Windows build will became separate repository
 
 ## Building on GNU/Linux
 To build project on GNU/Linux make sure that:
